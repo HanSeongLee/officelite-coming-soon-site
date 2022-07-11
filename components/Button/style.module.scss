@@ -1,0 +1,18 @@
+
+.button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &.primary {
+    min-width: 171px;
+    min-height: 56px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+    background: #5175FF;
+    box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.247159);
+    border-radius: 28px;
+  }
+}
