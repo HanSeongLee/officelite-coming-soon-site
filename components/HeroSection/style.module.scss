@@ -1,0 +1,48 @@
+
+.heroSection {
+  position: relative;
+  min-height: 800px;
+  padding-top: 156px;
+
+  &::before {
+    position: absolute;
+    top: -170px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/img/home/bg-pattern-header.svg") no-repeat;
+    background-position: top center;
+    background-size: 458px 458px;
+    content: "";
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .banner {
+      text-align: center;
+      width: 190px;
+      margin-bottom: 28px;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+      color: #333950;
+      margin-bottom: 28px;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 26px;
+      text-align: center;
+      color: #747B95;
+      margin-bottom: 24px;
+    }
+  }
+}
