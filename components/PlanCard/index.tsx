@@ -22,7 +22,7 @@ const PlanCard: React.FC<IProps> = ({ plan, className, ...props }) => {
                 {name}
             </div>
             <div className={styles.price}>
-                {price === 0 ? 'Free' : price}
+                {price === 0 ? 'Free' : `$${price}`}
             </div>
             <div className={styles.description}>
                 {description}
