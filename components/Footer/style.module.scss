@@ -1,0 +1,28 @@
+
+.footer {
+  width: 100%;
+  padding: 7px 0 100px;
+
+  .container {
+    text-align: center;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+
+    .highlight {
+      color: #5175FF
+    }
+  }
+
+  .countdown {
+    margin-bottom: 40px;
+  }
+}
