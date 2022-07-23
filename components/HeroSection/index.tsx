@@ -16,16 +16,18 @@ const HeroSection: React.FC<HTMLAttributes<HTMLDivElement>> = ({className, ...pr
                          alt={''}
                     />
                 </picture>
-                <h2 className={styles.title}>
-                    A simple solution to complex tasks is coming soon
-                </h2>
-                <p className={styles.description}>
-                    Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
-                    collaboration platform built with an intuitive interface to improve productivity.
-                </p>
-                <Button>
-                    Get Started
-                </Button>
+                <div className={styles.content}>
+                    <h2 className={styles.title}>
+                        A simple solution to complex tasks is coming soon
+                    </h2>
+                    <p className={styles.description}>
+                        Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
+                        collaboration platform built with an intuitive interface to improve productivity.
+                    </p>
+                    <Button>
+                        Get Started
+                    </Button>
+                </div>
             </Container>
         </section>
     );
