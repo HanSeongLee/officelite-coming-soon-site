@@ -12,6 +12,7 @@
 
   @include media(">tablet") {
     display: grid;
+    grid-gap: 0 130px;
     grid-template-areas: "name option"
                           "price option"
                           "description option"
@@ -66,6 +67,7 @@
     margin-bottom: 32px;
 
     @include media(">tablet") {
+      text-align: left;
       margin-bottom: 0;
     }
   }
