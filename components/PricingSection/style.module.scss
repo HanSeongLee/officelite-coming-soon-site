@@ -1,9 +1,14 @@
+@import "styles/utils";
 
 .pricingSection {
   .planContainer {
     display: flex;
     flex-direction: column;
     grid-gap: 32px;
+
+    @include media(">tablet") {
+      grid-gap: 24px;
+    }
 
     > li:nth-child(2) > div {
       position: relative;
@@ -20,6 +25,10 @@
         background: url("/img/home/bg-pattern-pricing.svg") no-repeat bottom;
         background-size: 880px 880px;
         content: "";
+
+        @include media(">tablet") {
+          background-position: -319px center;
+        }
       }
 
       > ul {
