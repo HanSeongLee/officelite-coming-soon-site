@@ -7,6 +7,7 @@
 
   @include media(">tablet") {
     padding-top: 189px;
+    min-height: 600px;
   }
 
   &::before {
