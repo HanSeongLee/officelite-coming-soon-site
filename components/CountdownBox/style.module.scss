@@ -1,9 +1,14 @@
+@import "styles/utils";
 
 .countdownBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
   grid-gap: 13px;
+
+  @include media(">tablet") {
+    grid-gap: 16px;
+  }
 
   .card {
     flex: 1;
@@ -16,10 +21,23 @@
     background: #333950;
     border-radius: 4px;
 
+    @include media(">tablet") {
+      min-width: 100px;
+      min-height: 128px;
+      justify-content: center;
+      border-radius: 13px;
+    }
+
     .time {
       font-weight: 700;
       font-size: 32px;
       line-height: 48px;
+
+      @include media(">tablet") {
+        font-size: 56px;
+        line-height: 48px;
+        margin-bottom: 12px;
+      }
     }
 
     .unit {
@@ -27,6 +45,11 @@
       font-size: 12px;
       line-height: 28px;
       opacity: 0.5;
+
+      @include media(">tablet") {
+        font-size: 16px;
+        line-height: 28px;
+      }
     }
   }
 }
