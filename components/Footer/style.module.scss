@@ -1,9 +1,15 @@
+@import "styles/utils";
 
 .footer {
   width: 100%;
   padding: 7px 0 100px;
 
+  @include media(">tablet") {
+    padding: 16px 0 100px;
+  }
+
   .container {
+    max-width: 448px;
     text-align: center;
   }
 
@@ -17,6 +23,10 @@
     color: #FFFFFF;
     margin-bottom: 18px;
 
+    @include media(">tablet") {
+      margin-bottom: 12px;
+    }
+
     .highlight {
       color: #5175FF
     }
@@ -24,5 +34,9 @@
 
   .countdown {
     margin-bottom: 40px;
+
+    @include media(">tablet") {
+      margin-bottom: 48px;
+    }
   }
 }
