@@ -12,6 +12,10 @@
     padding-top: 72px;
   }
 
+  @include media(">desktop") {
+    padding-top: 81px;
+  }
+
   .container {
     display: flex;
     justify-content: center;
