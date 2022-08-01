@@ -9,8 +9,11 @@
   }
 
   .container {
-    max-width: 448px;
     text-align: center;
+
+    @include media(">tablet") {
+      max-width: 448px;
+    }
   }
 
   .title {
