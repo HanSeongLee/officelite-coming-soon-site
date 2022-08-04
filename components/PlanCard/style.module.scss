@@ -20,6 +20,10 @@
     padding: 48px;
   }
 
+  @include media(">desktop") {
+    display: flex;
+  }
+
   .name {
     grid-area: name;
     font-weight: 700;
@@ -29,6 +33,10 @@
 
     @include media(">tablet") {
       margin-bottom: 16px;
+    }
+
+    @include media(">desktop") {
+      margin-bottom: 40px;
     }
   }
 
@@ -42,6 +50,10 @@
     @include media(">tablet") {
       margin-bottom: 4px;
     }
+
+    @include media(">desktop") {
+      margin-bottom: 8px;
+    }
   }
 
   .description {
@@ -52,6 +64,10 @@
 
     @include media(">tablet") {
       margin-bottom: 24px;
+    }
+
+    @include media(">desktop") {
+      margin-bottom: 56px;
     }
   }
 
@@ -69,6 +85,11 @@
     @include media(">tablet") {
       text-align: left;
       margin-bottom: 0;
+    }
+
+    @include media(">desktop") {
+      text-align: center;
+      margin-bottom: 32px;
     }
   }
 
