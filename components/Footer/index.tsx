@@ -11,15 +11,17 @@ const Footer: React.FC = () => {
     return (
         <footer className={styles.footer}>
             <Container className={styles.container}>
-                <h2 className={styles.title}>
-                    Coming <span className={styles.highlight}>
+                <div>
+                    <h2 className={styles.title}>
+                        Coming <span className={styles.highlight}>
                         {formatter.format(date).replace('.', '')}
                     </span>
-                </h2>
-                <CountdownContainer className={styles.countdown}
-                                    date={date}
-                />
-                <Button>
+                    </h2>
+                    <CountdownContainer className={styles.countdown}
+                                        date={date}
+                    />
+                </div>
+                <Button className={styles.button}>
                     Get Started
                 </Button>
             </Container>

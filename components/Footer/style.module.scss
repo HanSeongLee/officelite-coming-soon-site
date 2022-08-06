@@ -8,11 +8,23 @@
     padding: 16px 0 100px;
   }
 
+  @include media(">desktop") {
+    padding: 0 0 91px;
+  }
+
   .container {
     text-align: center;
 
     @include media(">tablet") {
       max-width: 448px;
+    }
+
+    @include media(">tablet") {
+      max-width: 1110px;
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
     }
   }
 
@@ -20,7 +32,6 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 48px;
-    text-align: center;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -28,6 +39,10 @@
 
     @include media(">tablet") {
       margin-bottom: 12px;
+    }
+
+    @include media(">desktop") {
+      margin-bottom: 2px;
     }
 
     .highlight {
@@ -40,6 +55,16 @@
 
     @include media(">tablet") {
       margin-bottom: 48px;
+    }
+
+    @include media(">desktop") {
+      margin-bottom: 0;
+    }
+  }
+
+  .button {
+    @include media(">desktop") {
+      margin-top: 64px;
     }
   }
 }
