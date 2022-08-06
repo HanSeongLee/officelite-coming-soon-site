@@ -28,6 +28,11 @@
       border-radius: 13px;
     }
 
+    @include media(">desktop") {
+      justify-content: flex-start;
+      padding: 26px 13px 18px 17px;
+    }
+
     .time {
       font-weight: 700;
       font-size: 32px;
@@ -38,13 +43,16 @@
         line-height: 48px;
         margin-bottom: 12px;
       }
+
+      @include media(">desktop") {
+        margin-bottom: 8px;
+      }
     }
 
     .unit {
       font-weight: 700;
       font-size: 12px;
       line-height: 28px;
-      opacity: 0.5;
 
       @include media(">tablet") {
         font-size: 16px;
