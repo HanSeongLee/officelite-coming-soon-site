@@ -1,0 +1,71 @@
+@import "styles/utils";
+
+.openCountdown {
+  text-align: center;
+
+  @include media(">desktop") {
+    text-align: left;
+  }
+
+  &.light {
+    .title {
+      color: #333950;
+    }
+
+    .countdown {
+      li {
+        background: rgba(81, 117, 255, 0.1);
+
+        > div {
+          &:first-child {
+            color: #5175FF;
+          }
+
+          &:last-child {
+            color: #333950;
+          }
+        }
+      }
+    }
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 48px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+
+    @include media(">tablet") {
+      margin-bottom: 12px;
+    }
+
+    @include media(">desktop") {
+      margin-bottom: 2px;
+    }
+
+    .highlight {
+      color: #5175FF
+    }
+  }
+
+  .countdown {
+    margin-bottom: 40px;
+
+    li {
+      > div:last-child {
+        opacity: 0.5;
+      }
+    }
+
+    @include media(">tablet") {
+      margin-bottom: 48px;
+    }
+
+    @include media(">desktop") {
+      margin-bottom: 0;
+    }
+  }
+}
