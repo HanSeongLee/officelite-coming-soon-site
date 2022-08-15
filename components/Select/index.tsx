@@ -1,4 +1,4 @@
-import React, {HTMLAttributes, useCallback, useState} from 'react';
+import React, {forwardRef, HTMLAttributes, useCallback, useState} from 'react';
 import styles from './style.module.scss';
 import {Option} from '../../types/option';
 import cn from 'classnames';
@@ -8,7 +8,7 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
     options: Option[];
 }
 
-const Select: React.FC<IProps> = ({ id, name, options, className }) => {
+const Select = forwardRef<HTMLInputElement, IProps>(({ id, name, options, className }, ref) => {
     const [open, setOpen] = useState(false);
     const [selected, setSelected] = useState(0);
 
@@ -51,9 +51,10 @@ const Select: React.FC<IProps> = ({ id, name, options, className }) => {
             <input type={'hidden'}
                    name={name}
                    value={options?.length > 0 ? options[selected].value : ''}
+                   ref={ref}
             />
         </div>
     );
-};
+});
 
 export default Select;
