@@ -1,0 +1,20 @@
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 24px;
+  background: #FFFFFF;
+  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+  border-radius: 13px;
+  padding: 24px;
+
+  .price {
+    color: #333950;
+    opacity: 0.4;
+  }
+
+  .submitButton {
+    box-shadow: none;
+    margin-top: 16px;
+  }
+}
