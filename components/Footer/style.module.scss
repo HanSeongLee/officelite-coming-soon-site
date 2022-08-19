@@ -19,7 +19,7 @@
       max-width: 448px;
     }
 
-    @include media(">tablet") {
+    @include media(">desktop") {
       max-width: 1110px;
       text-align: left;
       display: flex;
