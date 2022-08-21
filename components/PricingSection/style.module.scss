@@ -48,6 +48,14 @@
       > a {
         color: #5175FF;
         background: #FFFFFF;
+
+        @include media(">desktop") {
+          transition: color 0.3s;
+
+          &:hover {
+            color: #829CFF;
+          }
+        }
       }
     }
   }

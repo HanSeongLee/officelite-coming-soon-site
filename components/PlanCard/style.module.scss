@@ -108,5 +108,13 @@
     background: rgba(81, 117, 255, 0.1);
     border-radius: 28px;
     cursor: pointer;
+
+    @include media(">desktop") {
+      transition: background 0.3s;
+
+      &:hover {
+        background: rgba(81, 117, 255, 0.35);
+      }
+    }
   }
 }
