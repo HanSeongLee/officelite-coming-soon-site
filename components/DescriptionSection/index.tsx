@@ -21,7 +21,7 @@ const DescriptionSection: React.FC<IProps> = ({ title, description, className, .
                 <p className={styles.description}>
                     {description}
                 </p>
-                <OpenCountdown />
+                <OpenCountdown className={styles.openCountdown} />
             </Container>
         </section>
     );
