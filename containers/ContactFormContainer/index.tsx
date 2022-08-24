@@ -1,8 +1,12 @@
-import React, {useCallback} from 'react';
+import React, {FormHTMLAttributes, useCallback} from 'react';
 import ContactForm from '../../components/ContactForm';
 import {useForm} from 'react-hook-form';
 
-const ContactFormContainer: React.FC = () => {
+interface IProps extends FormHTMLAttributes<HTMLFormElement> {
+
+}
+
+const ContactFormContainer: React.FC<IProps> = ({ ...props }) => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = useCallback((data) => {
@@ -13,6 +17,7 @@ const ContactFormContainer: React.FC = () => {
     return (
         <ContactForm register={register}
                      onSubmit={handleSubmit(onSubmit)}
+                     {...props}
         />
     );
 };
