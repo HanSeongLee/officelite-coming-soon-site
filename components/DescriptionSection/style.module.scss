@@ -3,6 +3,10 @@
 .descriptionSection {
   text-align: center;
 
+  @include media(">desktop") {
+    text-align: left;
+  }
+
   .container {
     max-width: 573px;
     display: flex;
@@ -24,6 +28,11 @@
       font-size: 40px;
       line-height: 48px;
     }
+
+    @include media(">desktop") {
+      font-size: 56px;
+      line-height: 64px;
+    }
   }
 
   .description {
@@ -37,11 +46,21 @@
       line-height: 26px;
       margin-bottom: 40px;
     }
+
+    @include media(">desktop") {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
 
   .openCountdown {
     max-width: 448px;
     margin-left: auto;
     margin-right: auto;
+
+    @include media(">desktop") {
+      margin-left: initial;
+      margin-right: initial;
+    }
   }
 }
