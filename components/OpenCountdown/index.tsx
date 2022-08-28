@@ -1,4 +1,4 @@
-import React, {HTMLAttributes} from 'react';
+import React, {HTMLAttributes, useEffect, useState} from 'react';
 import styles from './style.module.scss';
 import CountdownContainer from '../../containers/CountdownContainer';
 import cn from 'classnames';
@@ -9,7 +9,12 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
 
 const OpenCountdown: React.FC<IProps> = ({ theme, className, ...props }) => {
     const date = new Date('2022-11-04');
-    const formatter = new Intl.DateTimeFormat('fr', {dateStyle: 'medium'});
+    const [formattedDate, setFormattedDate] = useState('');
+
+    useEffect(() => {
+        const formatter = new Intl.DateTimeFormat('fr', {dateStyle: 'medium'});
+        setFormattedDate(formatter.format(date).replace('.', ''));
+    }, []);
 
     return (
         <div className={cn(styles.openCountdown, {
@@ -20,7 +25,7 @@ const OpenCountdown: React.FC<IProps> = ({ theme, className, ...props }) => {
         >
             <h2 className={styles.title}>
                 Coming <span className={styles.highlight}>
-                        {formatter.format(date).replace('.', '')}
+                        {formattedDate}
                     </span>
             </h2>
             <CountdownContainer className={styles.countdown}
