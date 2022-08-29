@@ -7,10 +7,13 @@
     max-width: 689px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
   }
 
   @include media(">desktop") {
     max-width: 1110px;
+  }
+
+  @include media(">1148px") {
+    padding: 0;
   }
 }
