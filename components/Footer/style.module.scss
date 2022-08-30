@@ -63,6 +63,8 @@
   }
 
   .button {
+    box-shadow: none;
+
     @include media(">desktop") {
       margin-top: 64px;
     }
