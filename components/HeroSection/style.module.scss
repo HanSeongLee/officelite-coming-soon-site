@@ -4,7 +4,7 @@
   position: relative;
   min-height: 800px;
   padding-top: 156px;
-  overflow: hidden;
+  overflow-x: clip;
 
   @include media(">tablet") {
     padding-top: 189px;
