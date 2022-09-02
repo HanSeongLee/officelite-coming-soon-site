@@ -1,10 +1,17 @@
-import React, {HTMLAttributes} from 'react';
+import React, {HTMLAttributes, useCallback} from 'react';
 import styles from './style.module.scss';
 import cn from 'classnames';
 import Container from '../Container';
 import Button from '../Button';
+import {useRouter} from 'next/router';
 
 const HeroSection: React.FC<HTMLAttributes<HTMLDivElement>> = ({className, ...props}) => {
+    const route = useRouter();
+
+    const onClick = useCallback(() => {
+        route.push('/sign-up');
+    }, [route]);
+
     return (
         <section className={cn(styles.heroSection, className)}
                  {...props}
@@ -24,7 +31,7 @@ const HeroSection: React.FC<HTMLAttributes<HTMLDivElement>> = ({className, ...pr
                         Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
                         collaboration platform built with an intuitive interface to improve productivity.
                     </p>
-                    <Button>
+                    <Button onClick={onClick}>
                         Get Started
                     </Button>
                 </div>
