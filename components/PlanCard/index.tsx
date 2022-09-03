@@ -3,6 +3,7 @@ import styles from './style.module.scss';
 import {Plan} from '../../types/plan';
 import Button from '../Button';
 import cn from 'classnames';
+import Link from 'next/link';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
     plan: Plan;
@@ -36,11 +37,11 @@ const PlanCard: React.FC<IProps> = ({ plan, className, ...props }) => {
                 ))}
             </ul>
 
-            <a className={styles.linkButton}
-               href={href}
-            >
-                Try for Free
-            </a>
+            <Link href={href}>
+                <a className={styles.linkButton}>
+                    Try for Free
+                </a>
+            </Link>
         </div>
     );
 };
