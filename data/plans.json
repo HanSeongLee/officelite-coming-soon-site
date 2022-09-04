@@ -8,7 +8,7 @@
       "2 GB storage",
       "Great security and support"
     ],
-    "href":"#basic"
+    "href":"/sign-up"
   },
   {
     "name":"Pro",
@@ -19,7 +19,7 @@
       "50 GB storage",
       "More control and insights"
     ],
-    "href":"#pro"
+    "href":"/sign-up"
   },
   {
     "name":"Ultimate",
@@ -30,6 +30,6 @@
       "100 GB storage",
       "VIP support"
     ],
-    "href":"#ultimate"
+    "href":"/sign-up"
   }
 ]
