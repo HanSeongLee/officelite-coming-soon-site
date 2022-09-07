@@ -2,6 +2,9 @@ import type {NextPage} from 'next'
 import styles from './style.module.scss';
 import Head from 'next/head';
 import Header from '../../components/Header';
+import DescriptionSection from '../../components/DescriptionSection';
+import Container from '../../components/Container';
+import ContactFormContainer from '../../containers/ContactFormContainer';
 
 const SignUpPage: NextPage = () => {
     return (
@@ -56,7 +59,16 @@ const SignUpPage: NextPage = () => {
             </Head>
 
             <main className={styles.main}>
-                <Header />
+                <Container className={styles.container}>
+                    <Header/>
+                    <DescriptionSection className={styles.descriptionSection}
+                                        title={'Work smarter. Save time.'}
+                                        description={'Easily manage your projects. Get on the list and receive in-app perks available only to early subscribers. We are moving into final development and getting ready for official launch soon.'}
+                    />
+                    <div className={styles.contactFormContainerWrapper}>
+                        <ContactFormContainer className={styles.contactFormContainer}/>
+                    </div>
+                </Container>
             </main>
         </>
     );
