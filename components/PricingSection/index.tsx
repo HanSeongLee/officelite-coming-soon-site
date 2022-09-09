@@ -8,6 +8,13 @@ const PricingSection: React.FC = () => {
     return (
         <section className={styles.pricingSection}>
             <Container>
+                <h2 style={{
+                    position: 'absolute',
+                    top: 99999,
+                    color: '#FFFFFF',
+                }}>
+                    Pricing
+                </h2>
                 <PlanContainer className={styles.planContainer}
                                plans={plans}
                 />
